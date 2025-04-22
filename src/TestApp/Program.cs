@@ -18,7 +18,7 @@ namespace TestApp {
 
 			var searchEngine = serviceProvider.GetService<IBolagsverketSearchEngine>();
 
-			var result = await searchEngine.SearchForCompanyByNameAsync("bae", 100, cancellationToken);
+			var result = await searchEngine.SearchForCompanyByNameAsync("hennes", 100, cancellationToken);
 
 			foreach (var company in result.Hits) {
 				var result2 = await searchEngine.SearchForDetailByIdAsync(company.OrganisationId, cancellationToken);
